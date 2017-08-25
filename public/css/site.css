@@ -1,5 +1,16 @@
 
 /* General Style */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+.main_text_large,
+.main_welcome_btn,
+p,
+h6,
+a,
+h2,
+btn{
+    font-family: 'Source Sans Pro', sans-serif;
+}
 
 .btn{
     cursor: pointer;
@@ -29,6 +40,7 @@ a:hover{
 .main_text_large{
     color: #fff;
     letter-spacing: 4px;
+    text-transform: uppercase;
 }
 
 .main_text_small{
@@ -41,22 +53,66 @@ a:hover{
     color: #fff;
     background-color: #21D190;
     border: none;
+    letter-spacing: 1px;
 }
 
 .display_product_name{
     margin-top: 1%;
     margin-bottom: 0;
     color: #000;
+    text-transform: uppercase;
 }
 
 .display_product_price{
-    font-size: 0.8rem;
+    color: #5e5e5e;
 }
 
 /* Show Page Style */
 
 .margin_top_container{
     margin-top: 4%;
+}
+
+.detail_product_name{
+    letter-spacing: 1.4px;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    margin-bottom: 1%;
+}
+
+.detail_product_price{
+    margin-bottom: 2%;
+    font-size: 1.3rem;
+}
+
+.detail_product_description{
+    font-size: 1.2rem;
+    color:  #666666;
+}
+
+.detail_action_block{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.detail_action_block input{
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.detail_action_block button{
+    color: #fff;
+    background-color: #21D190;
+    border: none;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+h4.detail_related_products{
+    margin-bottom: 2%;
+    margin-top: 1%;
 }
 
 /* Footer Style */
