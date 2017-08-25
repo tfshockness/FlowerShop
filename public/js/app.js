@@ -16160,7 +16160,7 @@ exports = module.exports = __webpack_require__(40)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -16507,6 +16507,10 @@ module.exports = function listToStyles (parentId, list) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__CategoryMenu_vue__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__CategoryMenu_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__CategoryMenu_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ProductList_vue__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ProductList_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__ProductList_vue__);
 //
 //
 //
@@ -16518,23 +16522,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
+
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+    components: {
+        'app-category-menu': __WEBPACK_IMPORTED_MODULE_0__CategoryMenu_vue___default.a,
+        'app-product-list': __WEBPACK_IMPORTED_MODULE_1__ProductList_vue___default.a
+    },
     data: function data() {
         return {
             categories: '',
@@ -16550,11 +16547,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }).catch(function (error) {
                 console.log(error);
             });
-        }
-    },
-    computed: {
-        productlink: function productlink() {
-            console.log(link);
         }
     },
     created: function created() {
@@ -16577,39 +16569,23 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('h2', [_vm._v("All my categories and products")]), _vm._v(" "), _c('div', _vm._l((_vm.categories), function(category) {
-    return _c('ul', {
-      key: category.id
-    }, [_c('li', [_c('a', {
+  return _c('div', [_c('h2', [_vm._v("All my categories and products")]), _vm._v(" "), _vm._l((_vm.categories), function(category) {
+    return _c('app-category-menu', {
+      key: category.id,
+      attrs: {
+        "category": category
+      },
       on: {
-        "click": function($event) {
-          _vm.getProducts(category.id)
-        }
+        "getProducts": _vm.getProducts
       }
-    }, [_vm._v(" " + _vm._s(category.name))])])])
-  })), _vm._v(" "), _vm._l((_vm.products), function(product) {
-    return _c('div', [_c('div', {
-      staticClass: "row"
-    }, [_c('div', {
-      staticClass: "col-md-3 text-center"
-    }, [_c('a', {
+    })
+  }), _vm._v(" "), _vm._l((_vm.products), function(product) {
+    return _c('app-product-list', {
+      key: product.id,
       attrs: {
-        "href": _vm.productlink
+        "product": product
       }
-    }, [_c('img', {
-      attrs: {
-        "src": "https://demo.woothemes.com/storefront/wp-content/plugins/woocommerce/assets/images/placeholder.png",
-        "alt": "product image",
-        "height": "300",
-        "width": "230"
-      }
-    })]), _vm._v(" "), _c('div', {
-      staticClass: "text-center"
-    }, [_c('p', [_vm._v("CAD " + _vm._s(product.price))]), _vm._v(" "), _c('p', [_vm._v(_vm._s(product.name) + " "), _c('button', {
-      attrs: {
-        "href": "#"
-      }
-    }, [_vm._v("Add to cart")])])])])])])
+    })
   })], 2)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
@@ -16617,6 +16593,289 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
      require("vue-hot-reload-api").rerender("data-v-8e5481a8", module.exports)
+  }
+}
+
+/***/ }),
+/* 45 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(46)
+}
+var Component = __webpack_require__(7)(
+  /* script */
+  __webpack_require__(48),
+  /* template */
+  __webpack_require__(49),
+  /* styles */
+  injectStyle,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "/Users/shockness/Code/shop/resources/assets/js/components/site/CategoryMenu.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] CategoryMenu.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-5b69f1aa", Component.options)
+  } else {
+    hotAPI.reload("data-v-5b69f1aa", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 46 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(47);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(41)("795b2265", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-5b69f1aa\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./CategoryMenu.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-5b69f1aa\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./CategoryMenu.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(40)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 48 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['category'],
+    methods: {
+        getProducts: function getProducts(id) {
+            this.$emit('getProducts', id);
+        }
+    }
+});
+
+/***/ }),
+/* 49 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('ul', [_c('li', [_c('a', {
+    on: {
+      "click": function($event) {
+        _vm.getProducts(_vm.category.id)
+      }
+    }
+  }, [_vm._v(_vm._s(_vm.category.name))])])])])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-5b69f1aa", module.exports)
+  }
+}
+
+/***/ }),
+/* 50 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(51)
+}
+var Component = __webpack_require__(7)(
+  /* script */
+  __webpack_require__(53),
+  /* template */
+  __webpack_require__(54),
+  /* styles */
+  injectStyle,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "/Users/shockness/Code/shop/resources/assets/js/components/site/ProductList.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] ProductList.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-146027ef", Component.options)
+  } else {
+    hotAPI.reload("data-v-146027ef", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 51 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(52);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(41)("22acdc3d", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-146027ef\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./ProductList.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-146027ef\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./ProductList.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 52 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(40)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 53 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['product'],
+    computed: {
+        link: function link() {
+            return '/shop/' + this.product.slug;
+        }
+    }
+
+});
+
+/***/ }),
+/* 54 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-md-3 text-center"
+  }, [_c('a', {
+    attrs: {
+      "href": _vm.link
+    }
+  }, [_c('img', {
+    attrs: {
+      "src": "https://demo.woothemes.com/storefront/wp-content/plugins/woocommerce/assets/images/placeholder.png",
+      "alt": "product image",
+      "height": "300",
+      "width": "230"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "text-center"
+  }, [_c('p', [_vm._v("CAD " + _vm._s(_vm.product.price))]), _vm._v(" "), _c('p', [_vm._v(_vm._s(_vm.product.name) + " "), _c('button', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Add to cart")])])])])])])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-146027ef", module.exports)
   }
 }
 
