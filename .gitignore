@@ -16,3 +16,5 @@ storage/*.key
 .rocketeer/
 
 *.zip
+
+public/js/app.js
