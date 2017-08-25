@@ -28,7 +28,7 @@
             <div class="row">
                 @foreach($category->products as $product)
                     @if($product->image == null)
-                        <div class="col-md-3 text-center">
+                        <div class="col-md-4 text-center">
                             <a href="{{ url('shop', $product->slug) }}">
                                 <img src="{{ asset('assets/common/placeholder.png') }}" alt="product image" height="300" width="230">
                             </a>
