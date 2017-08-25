@@ -9,7 +9,39 @@ a:hover{
     text-decoration: none;
 }
 
+@media (min-width: 576px) {
+    .jumbotron {
+        padding: 7rem 2rem;
+    }
+}
 /* Main Page Style */
+
+.main_welcome{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("../assets/common/main/main.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size:  cover;
+    -o-background-size: cover;
+    background-position: 30% 30%;
+}
+
+.main_text_large{
+    color: #fff;
+    letter-spacing: 4px;
+}
+
+.main_text_small{
+    color: #bfbfbf;
+    letter-spacing: 2px;
+}
+
+.main_welcome_btn{
+    margin-top: 3%;
+    color: #fff;
+    background-color: #21D190;
+    border: none;
+}
 
 .display_product_name{
     margin-top: 1%;
@@ -23,8 +55,30 @@ a:hover{
 
 
 /* Footer Style */
+
 .footer_container{
     background-color: #f2f2f2;
     border-top: 1px solid #DDDDDD;
     margin-top: 2%;
+}
+
+.footer_title_accent{
+    background-color: #21d192;
+    width: 70px;
+}
+
+.footer_second_column{
+    padding-left: 15%;
+}
+
+@media only screen and (max-width: 767px) {
+    .footer_second_column{
+        padding-left: 0;
+    }
+}
+
+.footer-copyright{
+    font-size: 0.7rem;
+    text-align: center;
+    background-color: #e6e6e6;
 }
