@@ -14,6 +14,11 @@
 //Route::get('/welcome', function () {
 //    return view('welcome');
 //});
+//JSON Routes
+
+Route::get('api/categories', 'JsonController@categories');
+Route::get('api/categorybyid/{id}','JsonController@categoryById');
+Route::get('api/productsbycategory', 'JsonController@productsByCategory');
 
 Auth::routes();
 Route::get('/', 'ShopController@index');
@@ -22,17 +27,4 @@ Route::get('/shop/{product}', 'ShopController@show');
 Route::get('/admin', 'AdminController@index');
 Route::resource('/category', 'CategoryController');
 Route::resource('/product', 'ProductController');
-Route::get('/api/productsbycategory', function(){
-    $categories = App\Category::with('products')->whereName('Featured')->first();
-    return $categories;
-});
 
-Route::get('/api/categories', function(){
-   $categories = App\Category::all();
-   return $categories;
-});
-
-Route::get('/api/categorybyid/{id}', function($id){
-    $categories = App\Category::find($id)->with('products')->get();
-    return $categories;
-});

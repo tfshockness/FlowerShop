@@ -16160,7 +16160,7 @@ exports = module.exports = __webpack_require__(40)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -16530,6 +16530,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -16543,11 +16545,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         getProducts: function getProducts($id) {
             var vm = this;
             axios.get('/api/categorybyid/' + $id).then(function (response) {
-                console.log(response.data);
-                vm.products = response.data;
+                console.log(response.data.products);
+                vm.products = response.data.products;
             }).catch(function (error) {
                 console.log(error);
             });
+        }
+    },
+    computed: {
+        productlink: function productlink() {
+            console.log(link);
         }
     },
     created: function created() {
@@ -16585,14 +16592,18 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       staticClass: "row"
     }, [_c('div', {
       staticClass: "col-md-3 text-center"
+    }, [_c('a', {
+      attrs: {
+        "href": _vm.productlink
+      }
     }, [_c('img', {
       attrs: {
-        "src": "",
+        "src": "https://demo.woothemes.com/storefront/wp-content/plugins/woocommerce/assets/images/placeholder.png",
         "alt": "product image",
         "height": "300",
         "width": "230"
       }
-    }), _vm._v(" "), _c('div', {
+    })]), _vm._v(" "), _c('div', {
       staticClass: "text-center"
     }, [_c('p', [_vm._v("CAD " + _vm._s(product.price))]), _vm._v(" "), _c('p', [_vm._v(_vm._s(product.name) + " "), _c('button', {
       attrs: {

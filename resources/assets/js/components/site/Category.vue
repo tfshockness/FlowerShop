@@ -9,7 +9,9 @@
         <div v-for="product in products">
             <div class="row">
                 <div class="col-md-3 text-center">
-                    <img src="" alt="product image" height="300" width="230">
+                    <a :href="productlink">
+                        <img src="https://demo.woothemes.com/storefront/wp-content/plugins/woocommerce/assets/images/placeholder.png" alt="product image" height="300" width="230">
+                    </a>
                     <div class="text-center">
                         <p>CAD {{product.price}}</p>
                         <p>{{product.name}} <button href="#">Add to cart</button></p>
@@ -36,14 +38,19 @@
                 let vm = this;
                 axios.get('/api/categorybyid/' + $id)
                     .then(function(response){
-                        console.log(response.data);
-                       vm.products = response.data;
+                        console.log(response.data.products);
+                       vm.products = response.data.products;
                     })
                     .catch(function(error){
                     console.log(error);
                 })
 
             }
+        },
+        computed: {
+          productlink: function(){
+              console.log(link);
+          }
         },
         created() {
             let vm = this;

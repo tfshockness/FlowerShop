@@ -11,8 +11,11 @@
     <title>Flower Shop</title>
 
     <!-- Styles -->
+
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/site.css') }}" rel="stylesheet">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/185e0bd75a.js"></script>
 </head>
 <body>
     <div id="app">
