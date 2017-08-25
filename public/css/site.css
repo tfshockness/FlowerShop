@@ -1,3 +1,30 @@
-.kate {
 
+/* General Style */
+
+.btn{
+    cursor: pointer;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+/* Main Page Style */
+
+.display_product_name{
+    margin-top: 1%;
+    margin-bottom: 0;
+    color: #000;
+}
+
+.display_product_price{
+    font-size: 0.8rem;
+}
+
+
+/* Footer Style */
+.footer_container{
+    background-color: #f2f2f2;
+    border-top: 1px solid #DDDDDD;
+    margin-top: 2%;
 }
