@@ -11,32 +11,31 @@
                 @endif
             </div>
             <div class="col-md-7">
-                <h2>{{ $product->name }} <small class="lead">{{ $product->code }}</small></h2>
+                <p class="detail_product_name">{{ $product->name }} &nbsp; <small class="lead">{{ $product->code }}</small></p>
 
-                <div>
+                <p class="detail_product_price">
                      CAD {{ $product->price }}
-                </div>
+                </p>
 
                 <div>
-                    <h4>Description</h4>
-                    <p class="lead"> {{ $product->description }}</p>
+                    <p class="detail_product_description"> {{ $product->description }}</p>
                 </div>
 
-                <div class="row">
+                <div class="detail_action_block">
                     <input type="text" id="productQnt" class="form-control col-md-1" value="1">
-                    <button id="addToCart" class="btn btn-primary col-md-3">Add to Cart</button>
+                    <button id="addToCart" class="btn btn-secondary col-md-3">Add to Cart</button>
                 </div>
                 <div clas="row">
                     <hr />
-                    <p>Category: @foreach ($product->categories as $category) {{ $category->name }} @endforeach</p>
+                    <p>Category:&nbsp; @foreach ($product->categories as $category) {{ $category->name }} @endforeach</p>
                 </div>
             </div>
         </div>
-
+        <br />
         <hr />
         <div class="row">
             <div class="col-md-12">
-                <h2>Related Products</h2>
+                <h4 class="detail_related_products">Related Products</h4>
             </div>
 
                 @foreach($related as $product)
@@ -59,7 +58,7 @@
                                 <a href="{{ url('shop', $product->slug) }}">
                                     <p class="display_product_name">{{$product->name}}</p>
                                 </a>
-                                <p class="display_product_price">$ {{$product->price}}</p>
+                                <p class="display_product_price">CAD {{$product->price}}</p>
                             </div>
                         </div>
                     @endforeach

@@ -10,7 +10,7 @@
                 <p class=" text-center lead main_text_small">beautiful than honi</p>
                 <div class="text-center">
                     <a href="{{url('shop/categories')}}">
-                        <button type="button" class="btn btn-secondary main_welcome_btn">See Categories</button>
+                        <button type="button" class="btn btn-secondary main_welcome_btn col-md-2">See Categories</button>
                     </a>
                 </div>
             </div>
@@ -80,10 +80,10 @@
 
                 <!--Third column-->
                 <div class="col-md-4 col-lg-4 col-xl-4 dark-grey-text footer_second_column">
-                    <h6 class="title font-bold"><strong>Store Hour</strong></h6>
+                    <h6 class="title font-bold"><strong>Store Hours</strong></h6>
                     <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto footer_title_accent">
-                    <p><i class="fa fa-home mr-2"></i>Mon - Fri : 9:30AM - 6:30PM</p>
-                    <p><i class="fa fa-envelope mr-2"></i>SAT : 10:00AM - 6:30PM</p>
+                    <p><i class="fa fa-circle-thin mr-2"></i>Mon - Fri : 9:30AM - 6:30PM</p>
+                    <p><i class="fa fa-circle-thin mr-2"></i>Sat : 10:00AM - 6:30PM</p>
                 </div>
                 <!--Third column-->
             </div>
