@@ -53,6 +53,11 @@ a:hover{
     font-size: 0.8rem;
 }
 
+/* Show Page Style */
+
+.margin_top_container{
+    margin-top: 4%;
+}
 
 /* Footer Style */
 
@@ -68,7 +73,7 @@ a:hover{
 }
 
 .footer_second_column{
-    padding-left: 15%;
+    padding-left: 7%;
 }
 
 @media only screen and (max-width: 767px) {
