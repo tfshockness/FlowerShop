@@ -23,7 +23,7 @@
 
                 <div class="detail_action_block">
                     <input type="text" id="productQnt" class="form-control col-md-1" value="1">
-                    <button id="addToCart" class="btn btn-secondary col-md-3">Add to Cart</button>
+                        <button id="addToCart" class="btn btn-secondary col-md-3">Add to Cart</button>
                 </div>
                 <div clas="row">
                     <hr />

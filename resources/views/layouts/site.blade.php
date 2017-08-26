@@ -21,6 +21,7 @@
     <div id="app">
         @include('layouts.site._menu')
         @yield('content')
+        @include('layouts.site._footer')
     </div>
     @include('layouts.common._scripts')
     <script src="{{ asset('js/app.js') }}"></script>

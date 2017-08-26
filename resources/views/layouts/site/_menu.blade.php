@@ -13,7 +13,10 @@
                 <a class="nav-link" href="/shop/categories">Categories</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">About us</a>
+                <a class="nav-link" href="/shop/cart">Cart</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/shop/cart/checkout">Checkout</a>
             </li>
         </ul>
         <ul class="navbar-nav my-2">

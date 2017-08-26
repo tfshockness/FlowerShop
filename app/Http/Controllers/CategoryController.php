@@ -38,7 +38,6 @@ class CategoryController extends Controller
          $slug = str_slug($request->name);
 
         if(Category::whereSlug($slug)->exists()){
-            global $slug;
             $slug .=  '-' . uniqid();
         }
 
