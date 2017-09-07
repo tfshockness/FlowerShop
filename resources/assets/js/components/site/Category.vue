@@ -3,7 +3,12 @@
         <h2>All my categories and products</h2>
 
             <app-category-menu v-for="category in categories" :key="category.id" :category="category" v-on:getProducts="getProducts"></app-category-menu>
-            <app-product-list v-for="product in products" :key="product.id" :product="product"></app-product-list>
+
+        <section>
+            <div class="row">
+                     <app-product-list v-for="product in products" :key="product.id" :product="product"></app-product-list>
+            </div><!--.row-->
+        </section>
 
     </div>
 
