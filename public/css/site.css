@@ -61,10 +61,12 @@ a:hover{
     margin-bottom: 0;
     color: #000;
     text-transform: uppercase;
+    font-size: 20px;
 }
 
 .display_product_price{
     color: #5e5e5e;
+    font-size: 18px;
 }
 
 /* Show Page Style */
@@ -113,6 +115,19 @@ a:hover{
 h4.detail_related_products{
     margin-bottom: 2%;
     margin-top: 1%;
+}
+
+/* ProductList Style */
+
+button.add_to_cart_btn {
+    color: #fff;
+    background-color: #21D190;
+    border: none;
+    margin-top: -8%;
+}
+
+button.add_to_cart_btn:hover{
+    background-color: #1cb07a;
 }
 
 /* Footer Style */
