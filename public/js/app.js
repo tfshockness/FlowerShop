@@ -16463,7 +16463,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -16511,6 +16511,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__CategoryMenu_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__CategoryMenu_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ProductList_vue__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ProductList_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__ProductList_vue__);
+//
+//
+//
 //
 //
 //
@@ -16648,7 +16651,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -16659,8 +16662,6 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
 //
 //
 //
@@ -16682,13 +16683,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('ul', [_c('li', [_c('a', {
+  return _c('div', [_c('li', {
+    staticClass: "category-list col"
+  }, [_c('a', {
     on: {
       "click": function($event) {
         _vm.getProducts(_vm.category.id)
       }
     }
-  }, [_vm._v(_vm._s(_vm.category.name))])])])])
+  }, [_vm._v(_vm._s(_vm.category.name))])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -16860,7 +16863,11 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('h2', [_vm._v("All my categories and products")]), _vm._v(" "), _vm._l((_vm.categories), function(category) {
+  return _c('div', [_c('div', {
+    staticClass: "category_menu_container row"
+  }, [_c('ul', {
+    staticClass: "row"
+  }, _vm._l((_vm.categories), function(category) {
     return _c('app-category-menu', {
       key: category.id,
       attrs: {
@@ -16870,7 +16877,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "getProducts": _vm.getProducts
       }
     })
-  }), _vm._v(" "), _c('section', [_c('div', {
+  }))]), _vm._v(" "), _c('section', [_c('div', {
     staticClass: "row"
   }, _vm._l((_vm.products), function(product) {
     return _c('app-product-list', {
@@ -16879,7 +16886,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "product": product
       }
     })
-  }))])], 2)
+  }))])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {

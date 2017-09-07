@@ -1,8 +1,11 @@
 <template>
     <div>
-        <h2>All my categories and products</h2>
 
-            <app-category-menu v-for="category in categories" :key="category.id" :category="category" v-on:getProducts="getProducts"></app-category-menu>
+        <div class="category_menu_container row">
+            <ul class="row">
+                <app-category-menu v-for="category in categories" :key="category.id" :category="category" v-on:getProducts="getProducts"></app-category-menu>
+            </ul>
+        </div>
 
         <section>
             <div class="row">
@@ -65,5 +68,4 @@
 </script>
 
 <style>
-
 </style>

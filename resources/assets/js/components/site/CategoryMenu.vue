@@ -1,8 +1,6 @@
 <template>
     <div>
-        <ul>
-            <li><a v-on:click="getProducts(category.id)">{{ category.name }}</a></li>
-        </ul>
+        <li class="category-list col"><a v-on:click="getProducts(category.id)">{{ category.name }}</a></li>
     </div>
 </template>
 
@@ -18,5 +16,4 @@
 </script>
 
 <style>
-
 </style>
