@@ -112,6 +112,10 @@ a:hover{
     border-radius: 0px;
 }
 
+.detail_action_block button:hover{
+    background-color: #1cb07a;
+}
+
 h4.detail_related_products{
     margin-bottom: 2%;
     margin-top: 1%;
@@ -128,6 +132,25 @@ button.add_to_cart_btn {
 
 button.add_to_cart_btn:hover{
     background-color: #1cb07a;
+}
+
+/* CategoryMenu Style */
+
+
+.category_menu_container{
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 4%;
+    margin-top: 3%;
+}
+
+li.category-list{
+    list-style-type: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+li.category-list:hover{
+    color: #8c8c8c;
 }
 
 /* Footer Style */
