@@ -10,7 +10,7 @@
                 <p class=" text-center lead main_text_small">beautiful than honi</p>
                 <div class="text-center">
                     <a href="{{url('shop/categories')}}">
-                        <button type="button" class="btn btn-secondary main_welcome_btn col-md-2">See Categories</button>
+                        <button type="button" class="btn main_welcome_btn col-md-2">See Categories</button>
                     </a>
                 </div>
             </div>
