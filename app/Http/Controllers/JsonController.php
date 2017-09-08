@@ -32,7 +32,7 @@ class JsonController extends Controller
         $storedProduct = new StoredProduct($product, $quantity);
 
         //check for the cart session
-        $oldCart = Session::has('cart') ? Session::get('card') : null;
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
 
         //Create new Cart Object
         $cart = new Cart($oldCart);
@@ -43,5 +43,12 @@ class JsonController extends Controller
         //create a session to store the product object and the quantity.
         Session::put('cart', $cart);
 
+    }
+
+    public function getCartSession(){
+
+        $cart = Session::has('cart') ? Session::get('cart') : null;
+
+        return $cart;
     }
 }

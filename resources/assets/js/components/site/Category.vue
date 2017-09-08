@@ -36,7 +36,7 @@
         methods:{
             getProducts: function($id){
                 let vm = this;
-                axios.get('/api/categorybyid/' + $id)
+                axios.get('/api/category/' + $id)
                     .then(function(response){
                         console.log(response.data.products);
                        vm.products = response.data.products;
