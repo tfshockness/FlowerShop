@@ -25,11 +25,11 @@ class JsonController extends Controller
         return $categories;
     }
 
-    public function addToCart($id, $quantity){
+    public function addToCart(Request $request){
         //get the id and find the product
-        $product = Product::find($id);
+        $product = Product::find($request->id);
 
-        $storedProduct = new StoredProduct($product, $quantity);
+        $storedProduct = new StoredProduct($product, $request->quantity);
 
         //check for the cart session
         $oldCart = Session::has('cart') ? Session::get('cart') : null;
