@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Product;
+use App\StoredProduct;
+use Session;
 use Illuminate\Http\Request;
 
 class ShopController extends Controller
@@ -28,11 +30,6 @@ class ShopController extends Controller
         return view('shop.categories');
     }
 
-    public function addToCart(){
-        //get the id and find the product
-        //create a session to store the product object and the quantity.
-        //if the object has the same Id, Add the new quantity.
-    }
     public function showCart(){
         return view('shop.cart');
     }
