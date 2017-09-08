@@ -49,6 +49,11 @@ class JsonController extends Controller
 
         $cart = Session::has('cart') ? Session::get('cart') : null;
 
+        if($cart === null){
+            $cart = [
+                'msg' => 'Your cart is empty'
+            ];
+        }
         return $cart;
     }
 }
