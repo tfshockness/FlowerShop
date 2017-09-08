@@ -19,10 +19,12 @@ window.Vue = require('vue');
 
 Vue.component('example', require('./components/Example.vue'));
 import Category from './components/site/Category.vue';
+import Cart from './components/site/YourCart.vue';
 
 const app = new Vue({
     el: '#app',
     components:{
-        'app-category': Category
+        'app-category': Category,
+        'app-yourcart': Cart
     }
 });
