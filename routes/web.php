@@ -17,8 +17,9 @@
 //JSON Routes
 
 Route::get('api/categories', 'JsonController@categories');
-Route::get('api/categorybyid/{id}','JsonController@categoryById');
+Route::get('api/category/{id}','JsonController@categoryById');
 Route::get('api/productsbycategory', 'JsonController@productsByCategory');
+Route::post('api/addtocart', 'JsonController@addToCart');
 
 Auth::routes();
 
