@@ -9,6 +9,7 @@
             <p class="display_product_name">{{product.name}}</p>
             <p class="display_product_price">CAD {{product.price}}</p>
             <button type="button" class="btn btn-sm add_to_cart_btn" href="#" v-on:click="addToCart">Add to cart</button>
+            <button type="button" class="btn btn-sm add_to_cart_tbn" @click="getCart">Console Cart</button>
         </div>
 
     </div>
@@ -33,6 +34,12 @@
                     })
                     .catch(function(error){
                         console.log(error);
+                    })
+            },
+            getCart(){
+                axios.get('/api/cart')
+                    .then(function(response){
+                        console.log(response);
                     })
             }
     }
