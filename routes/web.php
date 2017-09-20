@@ -16,11 +16,11 @@
 //});
 //JSON Routes
 
-Route::get('api/categories', 'JsonController@categories');
-Route::get('api/category/{id}','JsonController@categoryById');
-Route::get('api/productsbycategory', 'JsonController@productsByCategory');
-Route::post('api/addtocart', 'JsonController@addToCart');
-Route::get('api/cart', 'JsonController@getCartSession');
+//Route::get('api/categories', 'JsonController@categories');
+//Route::get('api/category/{id}','JsonController@categoryById');
+//Route::get('api/productsbycategory', 'JsonController@productsByCategory');
+//Route::post('api/addtocart', 'JsonController@addToCart');
+//Route::get('api/cart', 'JsonController@getCartSession');
 
 Auth::routes();
 

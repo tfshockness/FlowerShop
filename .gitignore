@@ -19,3 +19,5 @@ storage/*.key
 
 public/js/app.js
 *.xml
+*.xml
+.idea/workspace.xml
